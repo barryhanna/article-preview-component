@@ -45,7 +45,7 @@ h5.h6 {
 p {
   color: var(--clr-dark-blue);
   line-height: 154%;
-  font-size: 0.8125;
+  font-size: 0.8125rem;
   font-weight: var(--fnt-wgt-200);
 }
 
@@ -101,6 +101,48 @@ button {
   height: 40px;
   border-radius: 50%;
   margin-right: var(--spacer);
+}
+
+.share {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-dark-gray-blue);
+  height: 64px;
+  text-transform: uppercase;
+  border-radius: 0 0 10px 10px;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: var(--spacer);
+  letter-spacing: 5px;
+}
+
+.share > * {
+  margin-right: var(--spacer);
+}
+
+.share:first-child {
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+
+.share img {
+  width: 20px;
+  height: 20px;
+}
+
+.share-menu-button {
+  height: 32px;
+  width: 32px;
+  background-color: hsl(214, 17%, 51%);
+}
+
+.share:target {
+}
+
+.social-icons {
+  display: flex;
+  gap: var(--spacer);
 }
 
 .attribution {
