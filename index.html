@@ -22,7 +22,7 @@
       it felt slightly bare and uninviting. I’ve got some simple tips
       to help you make any room feel complete.</p>
 
-    <footer class="article-footer">
+    <footer id="article-footer" class="article-footer">
       <div class="details-wrapper">
         <img class="avatar" src="./images/avatar-michelle.jpg" alt="">
         <div class="article-details">
@@ -31,23 +31,25 @@
         </div>
       </div>
 
-      <button id="share" aria-label="share"><img src="./images/icon-share.svg" alt="share"></button>
+      <button id="show-share-menu-btn" aria-label="share"><img src="./images/icon-share.svg" alt="share"></button>
+
+      <div class="share" id="share">
+        <p>Share</p>
+        <div class="social-icons">
+          <img src="./images/icon-facebook.svg" alt="Share on Facebook">
+          <img src="./images/icon-twitter.svg" alt="Share on Twitter">
+          <img src="./images/icon-pinterest.svg" alt="Share on Pinterest">
+        </div>
+        <button id="share-menu-btn" class="button share-menu-button" aria-label="share"><img
+            src="./images/icon-share-light.svg" alt="share"></button>
     </footer>
-    <div class="share">
-      <p>Share</p>
-      <div class="social-icons">
-        <img src="./images/icon-facebook.svg" alt="Share on Facebook">
-        <img src="./images/icon-twitter.svg" alt="Share on Twitter">
-        <img src="./images/icon-pinterest.svg" alt="Share on Pinterest">
-      </div>
-      <button id="share-menu-btn" class="button share-menu-button" aria-label="share"><img
-          src="./images/icon-share-light.svg" alt="share"></button>
     </div>
   </article>
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>. -->
   </div>
+  <script src="./script.js"></script>
 </body>
 
 </html>

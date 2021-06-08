@@ -66,6 +66,7 @@ article > * {
 }
 
 .article-footer {
+  position: relative;
   margin-top: calc(var(--spacer) * 3);
   padding-bottom: var(--spacer);
   display: flex;
@@ -104,20 +105,24 @@ button {
 }
 
 .share {
-  display: flex;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   justify-content: space-between;
   align-items: center;
   background-color: var(--clr-dark-gray-blue);
   height: 64px;
+  width: 112%;
+  margin-left: calc(var(--spacer) * -1);
+  margin-right: calc(var(--spacer) * -1);
+  padding: var(--spacer);
   text-transform: uppercase;
   border-radius: 0 0 10px 10px;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: var(--spacer);
   letter-spacing: 5px;
 }
 
-.share > * {
+.share > *:not(:last-child) {
   margin-right: var(--spacer);
 }
 
@@ -138,6 +143,7 @@ button {
 }
 
 .share:target {
+  display: flex;
 }
 
 .social-icons {
