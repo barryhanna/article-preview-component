@@ -6,6 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
   /* outline: 1px solid crimson; */
 }
 
@@ -23,6 +24,10 @@
   --width-desktop: 1440px;
 
   --spacer: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -49,16 +54,19 @@ p {
   font-weight: var(--fnt-wgt-200);
 }
 
+.header-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  padding: 0;
+  margin: 0;
+}
+
 article {
-  background-color: #fff;
-  background-image: url('./images/drawers.jpg');
-  background-size: 100% 200px;
-  background-repeat: no-repeat;
-  background-position: center top;
-  padding-top: calc(200px + 0.1em);
   box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
   border-radius: 10px;
   margin: calc(var(--spacer) * 2);
+  overflow: hidden;
 }
 
 article > * {
@@ -148,7 +156,11 @@ button {
 
 .social-icons {
   display: flex;
-  gap: var(--spacer);
+  gap: calc(var(--spacer) / 2);
+}
+
+.social-icons img {
+  width: 100%;
 }
 
 .attribution {
