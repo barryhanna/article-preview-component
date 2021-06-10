@@ -48,6 +48,10 @@ h5.h6 {
   line-height: 150%;
 }
 
+h3 {
+  margin-bottom: var(--spacer);
+}
+
 p {
   color: var(--clr-dark-blue);
   line-height: 154%;
@@ -57,10 +61,10 @@ p {
 
 .header-img {
   height: 200px;
-  width: 100%;
+  width: calc(100% + var(--spacer) * 2);
   object-fit: cover;
   padding: 0;
-  margin: 0;
+  margin: calc(var(--spacer) * -1);
 }
 
 article {
@@ -99,9 +103,8 @@ time {
   color: var(--clr-gray-blue);
 }
 
-a[class*='button'],
-button {
-  background: hsla(210, 46%, 95%, 1);
+a[class*='button'] {
+  background-color: hsla(210, 46%, 95%, 1);
   border-radius: 50%;
   border: 0;
   height: 32px;
@@ -136,10 +139,12 @@ a[class*='button'] img {
   margin-left: calc(var(--spacer) * -1);
   margin-right: calc(var(--spacer) * -1);
   padding: var(--spacer);
+  padding-bottom: var(--spacer);
   margin-bottom: calc(var(--spacer) * -1);
   text-transform: uppercase;
   border-radius: 0 0 10px 10px;
   letter-spacing: 5px;
+  cursor: pointer;
 }
 
 .share > *:not(:last-child) {
@@ -156,10 +161,10 @@ a[class*='button'] img {
   height: 20px;
 }
 
-.share-menu-button {
+.share .share-menu-button {
+  background: var(--clr-dark-blue);
   height: 32px;
   width: 32px;
-  background-color: hsl(214, 17%, 51%);
 }
 
 .share:target {
@@ -189,4 +194,56 @@ a[class*='button'] img {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 600px) {
+  h3 {
+    font-size: 20px;
+  }
+
+  article {
+    display: flex;
+    flex-direction: row;
+    gap: calc(var(--spacer) * 2);
+  }
+
+  .header-img-wrapper {
+    margin: 0;
+    padding: 0;
+    margin-bottom: calc(var(--spacer) * -1);
+  }
+
+  .header-img {
+    height: 100%;
+    margin: calc(var(--spacer) * -1);
+    margin-right: 0;
+  }
+
+  .share {
+    position: absolute;
+    top: -5rem;
+    width: fit-content;
+    border-radius: 10px;
+    transform: translateX(50%);
+    z-index: 2;
+    box-shadow: 5px 5px 5px rgba(201, 213, 225, 0.503415);
+  }
+
+  .share::after {
+    position: absolute;
+    content: '';
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-top: 10px solid var(--clr-dark-gray-blue);
+  }
+
+  .share-menu-button {
+    display: none;
+  }
+
+  .share > .social-icons:not(:last-child) {
+    margin-right: 0;
+  }
 }
