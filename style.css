@@ -103,6 +103,7 @@ time {
   color: var(--clr-gray-blue);
 }
 
+button,
 a[class*='button'] {
   background-color: hsla(210, 46%, 95%, 1);
   border-radius: 50%;
@@ -111,6 +112,7 @@ a[class*='button'] {
   width: 32px;
 }
 
+button,
 a[class*='button'] img {
   height: 13px;
   width: 15px;
@@ -167,7 +169,7 @@ a[class*='button'] img {
   width: 32px;
 }
 
-.share:target {
+.share.show {
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
