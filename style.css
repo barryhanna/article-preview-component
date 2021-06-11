@@ -142,8 +142,6 @@ button img {
   align-items: center;
   height: 64px;
   width: 100%;
-  /* margin-left: calc(var(--spacer) * -1);
-  margin-right: calc(var(--spacer) * -1); */
   margin-bottom: calc(var(--spacer) * -1);
   padding: var(--spacer);
   padding-bottom: var(--spacer);
@@ -201,9 +199,8 @@ button img {
     position: absolute;
     top: -5rem;
     width: fit-content;
+    align-items: baseline;
     border-radius: 10px;
-    transform: translateX(50%);
-    z-index: 2;
     box-shadow: 5px 5px 5px rgba(201, 213, 225, 0.503415);
   }
 
